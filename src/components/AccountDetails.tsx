@@ -113,7 +113,7 @@ const transactionsData = [
   {
     dateLabel: '21 April, Tuesday',
     items: [
-      { id: '64', title: 'CWIARTEK ALKOHOLE S01', amount: '-4,99 PLN', balance: '58,39 PLN', icon: 'ShoppingCart' },
+      { id: '64', title: 'CWIARTEK ALKOHOLE S01', amount: '-4,99 PLN', balance: '2,34 PLN', icon: 'ShoppingCart' },
       { id: '65', title: 'Ceji', amount: '-400,00 PLN', balance: '7,33 PLN', icon: 'Download' },
       { id: '66', title: 'CWIARTEK ALKOHOLE S01', amount: '-5,99 PLN', balance: '52,40 PLN', icon: 'ShoppingCart' },
       { id: '67', title: 'PIJALNIA WODKI I PIWA', amount: '-8,50 PLN', balance: '151,16 PLN', icon: 'ShoppingCart' },
