@@ -114,7 +114,7 @@ const transactionsData = [
     dateLabel: '21 April, Tuesday',
     items: [
       { id: '64', title: 'CWIARTEK ALKOHOLE S01', amount: '-4,99 PLN', balance: '58,39 PLN', icon: 'ShoppingCart' },
-      { id: '65', title: 'Ceji', amount: '-1,00 PLN', balance: '49,33 PLN', icon: 'Download' },
+      { id: '65', title: 'Ceji', amount: '-400,00 PLN', balance: '7,33 PLN', icon: 'Download' },
       { id: '66', title: 'CWIARTEK ALKOHOLE S01', amount: '-5,99 PLN', balance: '52,40 PLN', icon: 'ShoppingCart' },
       { id: '67', title: 'PIJALNIA WODKI I PIWA', amount: '-8,50 PLN', balance: '151,16 PLN', icon: 'ShoppingCart' },
       { id: '68', title: 'YOLANDA MUNYULWA UL. CYPRIANA...', amount: '20,00 PLN', balance: '50,33 PLN', icon: 'CreditCard', isPositive: true },
@@ -306,7 +306,12 @@ const AccountDetails: React.FC = () => {
               </div>
               
               {dayGroup.items.map((tx) => (
-                <div key={tx.id} className="flex-between" style={{ padding: '12px 20px', borderBottom: '1px dashed #e5e7eb' }}>
+                <div 
+                  key={tx.id} 
+                  className="flex-between" 
+                  style={{ padding: '12px 20px', borderBottom: '1px dashed #e5e7eb', cursor: 'pointer' }}
+                  onClick={() => navigate(`/transaction/${tx.id}`)}
+                >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flex: 1, minWidth: 0 }}>
                     <div style={{ 
                       width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0,

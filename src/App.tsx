@@ -3,6 +3,7 @@ import Splash from './components/Splash';
 import Login from './components/Login';
 import Home from './components/Home';
 import AccountDetails from './components/AccountDetails';
+import TransactionDetail from './components/TransactionDetail';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/account" element={<AccountDetails />} />
+        <Route path="/transaction/:id" element={<TransactionDetail />} />
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
