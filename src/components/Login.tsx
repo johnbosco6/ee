@@ -32,7 +32,12 @@ const Login: React.FC = () => {
       backgroundImage: 'url(/login-bg.png)', 
       backgroundSize: 'cover', 
       backgroundPosition: 'center',
-      position: 'relative'
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      zIndex: 9999
     }}>
       {/* Dark overlay */}
       <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 1 }}></div>
@@ -49,20 +54,18 @@ const Login: React.FC = () => {
           <Smartphone size={24} />
         </div>
 
-        {/* Logo and Greeting */}
-        <div style={{ textAlign: 'center', marginTop: '40px', color: 'white' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-             <img src="/logo.svg" alt="ERSTE Logo" style={{ width: '180px', height: 'auto', filter: 'brightness(1.5)' }} />
-          </div>
+        {/* Greeting and PIN Indicators */}
+        <div style={{ textAlign: 'center', marginTop: '60px', color: 'white' }}>
           <h2 style={{ fontSize: '32px', fontWeight: 'normal', margin: 0 }}>
             Hello, <span style={{ fontWeight: 'bold' }}>Johnbosco!</span>
           </h2>
-          <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
+          <div style={{ marginTop: '30px', display: 'flex', justifyContent: 'center', gap: '12px' }}>
             {[0, 1, 2, 3].map((i) => (
               <div key={i} style={{ 
-                width: '12px', height: '12px', borderRadius: '50%', 
+                width: '14px', height: '14px', borderRadius: '50%', 
                 backgroundColor: pin.length > i ? 'white' : 'transparent',
-                border: '1px solid white'
+                border: '2px solid white',
+                transition: 'background-color 0.1s ease'
               }}></div>
             ))}
           </div>
